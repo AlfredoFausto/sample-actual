@@ -47,14 +47,6 @@ jobs:
       - name: Install Actual
         id: install-actual
         run: ls -la && yarn install
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Start Actual
-        id: deployment
-        uses: actions/deploy-pages@v4
+        id: start-actual
+        run: yarn start
