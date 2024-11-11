@@ -46,7 +46,7 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Install Actual
         id: install-actual
-        run: ll -ls && yarn install
+        run: ls -la && yarn install
 
   # Deployment job
   deploy:
