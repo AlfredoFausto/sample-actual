@@ -46,7 +46,7 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Install Actual
         id: install-actual
-        run: cd ${{ github.workspace }}/actual-server && yarn install
+        run: ll -ls && yarn install
 
   # Deployment job
   deploy:
